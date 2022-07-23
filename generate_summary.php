@@ -4,14 +4,21 @@
     $lastName = $_POST['lastname'];
     $country = $_POST['country'];
     $age = $_POST['age'];
-    $languages = implode(', ', $_POST['languages']);
+    $languages = $_POST['languages'];
+
+    if (gettype($languages) == 'array') {
+        $languages = implode(', ', $languages);
+    }
+
     $degree = $_POST['degree'];
     $skills = explode(',',$_POST['skills']);
     $interest = $_POST['interest'];
     
     $image = $_FILES['photo'];
     $image_tmp_name = $image['tmp_name'];
-    move_uploaded_file($image_tmp_name, "./storage/images/".$_POST['firstname'].".jpg");
+    if ($image['type'] == 'image/jpeg' || $image['type'] == 'image/png') {
+        move_uploaded_file($image_tmp_name, "./storage/images/".$_POST['firstname'].".jpg");
+    }
 ?>
 
 <!DOCTYPE html>

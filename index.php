@@ -81,15 +81,15 @@
                 </label>
 
                 <label for="skills"><span>Write three of your top skills. <br><span class="small">Write your key skills comma separated</span></span>
-                    <input type="text" name="skills" id="skills">
+                    <input type="text" name="skills" id="skills" required>
                 </label>
 
                 <label for="interest">
-                    <textarea name="interest" id="interst" cols="30" rows="10" placeholder="write shortly about your interests, hobbies, likes and dislikes."></textarea>
+                    <textarea name="interest" id="interst" cols="30" rows="10" placeholder="write shortly about your interests, hobbies, likes and dislikes." required></textarea>
                 </label>
 
                 <label for="photo">Upload your photo here
-                    <input type="file" name="photo" id="photo">
+                    <input type="file" name="photo" id="photo" required>
                 </label>
                 <button type="submit">Submit</button>
             </form>
@@ -98,3 +98,7 @@
     <script src="./assets/js/index.js"></script>
 </body>
 </html>
+
+<?php
+    echo gettype('hey')
+?>
