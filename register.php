@@ -1,3 +1,9 @@
+<?php
+    include_once('core_functions.php');
+    if (isLoggedIn()) {
+        header('location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

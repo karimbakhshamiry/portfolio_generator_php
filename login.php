@@ -1,7 +1,7 @@
 <?php
     include_once('core_functions.php');
     if (isLoggedIn()) {
-        header('index.php');
+        header('location: index.php');
     }
 
     // fake data that we pretend came from database

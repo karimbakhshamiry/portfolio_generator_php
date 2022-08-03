@@ -1,4 +1,9 @@
 <?php
+    include_once('core_functions.php');
+    if (isLoggedIn()) {
+        header('location: index.php');
+    }
+    
     $message = '';
     if (isset($_POST['email'])) {
         $email = $_POST["email"];
